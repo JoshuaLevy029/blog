@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Blade;
 
 class ComponentsServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,11 @@ class ComponentsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Blade::component('app', \App\View\Components\App::class);
+        $this->menuComponents();
+    }
+
+    public function menuComponents () {
+        Blade::componentNamespace('App\View\Components\Menu\Navbar', 'navbar');
     }
 }

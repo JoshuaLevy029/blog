@@ -4,7 +4,7 @@ namespace App\View\Components\Menu\Navbar;
 
 use Illuminate\View\Component;
 
-class NavText extends Component
+class Brand extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class NavText extends Component
      */
     public function render()
     {
-        return view('components.menu.navbar.nav-text');
+        return view('components.menu.navbar.brand');
     }
 }

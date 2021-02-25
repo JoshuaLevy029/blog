@@ -30,12 +30,13 @@
         @yield('modals')
         
         <script src="{{module('jquery/dist/jquery.js')}}"></script>
+        <script src="{{module('mdbootstrap/js/popper.js')}}"></script>
         <script src="{{module('bootstrap/dist/js/bootstrap.js')}}"></script>
         <script src="{{module('mdbootstrap/js/mdb.js')}}"></script>
         <script src="{{module('toastr/build/toastr.min.js')}}"></script>
         <script src="{{module('sweetalert2/dist/sweetalert2.js')}}"></script>
         <script src="{{module('lightbox2/src/js/lightbox.js')}}"></script>
-        <link rel="stylesheet" href="{{js('app.js')}}">
+        <script src="{{js('app.js')}}"></script>
         @stack('scripts')
     </body>
 </html>

@@ -4,16 +4,20 @@ namespace App\View\Components\Menu\Navbar;
 
 use Illuminate\View\Component;
 
-class NavDropdown extends Component
-{
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
+class NavDropdown extends Component {
+    public $direction, $content, $icon, $title, $id, $css, $css2, $css3, $addOn, $addOn2, $addOn3;
+
+    public function __construct($direction = 'dropdown', $icon = '', $title, $id, $css = '', $css2 = '', $css3 = '', $addOn = '', $addOn2 = '', $addOn3 = '') {
+        $this->direction = $direction;
+        $this->icon = $icon;
+        $this->title = $title;
+        $this->id = $id;
+        $this->css = $css;
+        $this->css2 = $css2;
+        $this->css3 = $css3;
+        $this->addOn = $addOn;
+        $this->addOn2 = $addOn2;
+        $this->addOn3 = $addOn3;
     }
 
     /**
