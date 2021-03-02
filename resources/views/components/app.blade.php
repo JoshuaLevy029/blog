@@ -6,8 +6,9 @@
             <x-navbar::nav>
                 <x-slot name="content">
                     <x-navbar::nav-item css="ml-1 mr-1" title="Home" route="index" icon="fas fa-home"/>
-                    <x-navbar::nav-item css="ml-1 mr-1" title="Sobre" route="about" icon="far fa-user-circle"/>
-                    <x-navbar::nav-item css="ml-1 mr-1" title="Contato" route="contact" icon="far fa-comments"/>
+                    <x-navbar::nav-item css="ml-1 mr-1" title="About" route="about" icon="far fa-user-circle"/>
+                    <x-navbar::nav-item css="ml-1 mr-1" title="Contact" route="contact" icon="far fa-comments"/>
+                    <x-navbar::nav-item css="ml-1 mr-1 d-block d-md-none" title="Profile" icon="far fa-user"/>
                 </x-slot>
             </x-navbar::nav>
             <x-navbar::nav css="nav-flex-icons" float="ml-auto">
@@ -15,6 +16,13 @@
                     <x-navbar::nav-icon icon="fab fa-facebook-square" title="Me adicione no Facebook" route="https://www.facebook.com/joshua.levy.3139241" :redirect=true/>
                     <x-navbar::nav-icon icon="fab fa-instagram" title="Siga-me no Instagram"/>
                     <x-navbar::nav-icon icon="fab fa-linkedin-in" title="Conecte-se no LinkedIn"/>
+                    <x-navbar::nav-avatar>
+                        <x-slot name="content">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </x-slot>
+                    </x-navbar::nav-avatar>
                 </x-slot>
             </x-navbar::nav>
         </x-slot>
