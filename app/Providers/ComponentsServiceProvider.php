@@ -34,6 +34,7 @@ class ComponentsServiceProvider extends ServiceProvider
     public function menuComponents () {
         Blade::componentNamespace('App\View\Components\Menu\Navbar', 'navbar');
         Blade::componentNamespace('App\View\Components\Blog', 'blog');
+        Blade::componentNamespace('App\View\Components\Validation', 'validation');
     }
 
     public function renderComposers () {

@@ -17,3 +17,5 @@ use App\Http\Controllers\SiteController;
 Route::get('/', [SiteController::class, 'index'])->name('index');
 Route::get('/contact', [SiteController::class, 'contact'])->name('contact');
 Route::get('/about', [SiteController::class, 'about'])->name('about');
+
+require base_path('routes/auth.php');
