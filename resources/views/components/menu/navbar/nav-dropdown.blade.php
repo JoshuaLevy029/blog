@@ -3,6 +3,8 @@
         @if($icon) <i class="{{$icon}} mr-1"></i> @endif {{$title}}
     </a>
     <div class="dropdown-menu {{$css3}}" aria-labelledby="{{$id}}" {!! $addOn3 !!}>
-        {!! $content !!}
+        <ul class="list-unstyled">
+            {!! $content !!}
+        </ul>
     </div>
 </li>

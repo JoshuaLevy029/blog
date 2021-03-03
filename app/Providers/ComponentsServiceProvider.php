@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\View\Composers\MenuBlog;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\View;
 
 class ComponentsServiceProvider extends ServiceProvider
 {
@@ -26,9 +28,15 @@ class ComponentsServiceProvider extends ServiceProvider
     {
         Blade::component('app', \App\View\Components\App::class);
         $this->menuComponents();
+        $this->renderComposers();
     }
 
     public function menuComponents () {
         Blade::componentNamespace('App\View\Components\Menu\Navbar', 'navbar');
+        Blade::componentNamespace('App\View\Components\Blog', 'blog');
+    }
+
+    public function renderComposers () {
+        View::composer('components.app', MenuBlog::class);
     }
 }

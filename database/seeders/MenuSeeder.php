@@ -17,18 +17,21 @@ class MenuSeeder extends Seeder
         $data = [
             [
                 'name' => 'Home',
-                'route' => 'home',
+                'route' => 'index',
                 'order' => 1,
-            ],
-            [
-                'name' => 'Contact',
-                'route' => 'contact',
-                'order' => 2,
+                'icon' => 'fas fa-home',
             ],
             [
                 'name' => 'About',
                 'route' => 'about',
+                'order' => 2,
+                'icon' => 'far fa-user-circle',
+            ],
+            [
+                'name' => 'Contact',
+                'route' => 'contact',
                 'order' => 3,
+                'icon' => 'far fa-comments',
             ],
         ];
 

@@ -5,9 +5,18 @@
         <x-slot name="content">
             <x-navbar::nav>
                 <x-slot name="content">
-                    <x-navbar::nav-item css="ml-1 mr-1" title="Home" route="index" icon="fas fa-home"/>
+                    {{-- <x-navbar::nav-item css="ml-1 mr-1" title="Home" route="index" icon="fas fa-home"/>
                     <x-navbar::nav-item css="ml-1 mr-1" title="About" route="about" icon="far fa-user-circle"/>
-                    <x-navbar::nav-item css="ml-1 mr-1" title="Contact" route="contact" icon="far fa-comments"/>
+                    <x-navbar::nav-item css="ml-1 mr-1" title="Contact" route="contact" icon="far fa-comments"/> --}}
+                    @foreach ($menu as $item)
+                        @if ($item->type == 'dropdown')
+                            @php $submenu = $item->submenu; @endphp
+                            <x-blog::menu-dropdown :item=$item :menu=$submenu/>
+                        @else
+                        @php $redirect = ($item->type == 'redirect') ? true : false; @endphp
+                            <x-navbar::nav-item css="ml-1 mr-1" title="{{$item->name}}" icon="{{$item->icon?$item->icon:''}}" route="{{$item->route?$item->route:''}}" :redirect=$redirect/>
+                        @endif
+                    @endforeach
                     <x-navbar::nav-item css="ml-1 mr-1 d-block d-md-none" title="Profile" icon="far fa-user"/>
                 </x-slot>
             </x-navbar::nav>
