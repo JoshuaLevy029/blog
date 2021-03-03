@@ -52,4 +52,10 @@
             return assets("layouts/{$path}");
         }
     }
+
+    if (!function_exists('plugin_js')) {
+        function plugin_js(string $path = '') {
+            return assets("js/plugins/{$path}");
+        }
+    }
 ?>
