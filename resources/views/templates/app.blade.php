@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="{{module('toastr/build/toastr.css')}}">
         <link rel="stylesheet" href="{{module('sweetalert2/dist/sweetalert2.css')}}">
         <link rel="stylesheet" href="{{module('lightbox2/src/css/lightbox.css')}}">
+        <link rel="stylesheet" href="{{plugin_js('waitme/waitme.css')}}">
         <link rel="stylesheet" href="{{css('app.css')}}">
         @stack('styles')
     </head>
@@ -36,6 +37,7 @@
         <script src="{{module('toastr/build/toastr.min.js')}}"></script>
         <script src="{{module('sweetalert2/dist/sweetalert2.js')}}"></script>
         <script src="{{module('lightbox2/src/js/lightbox.js')}}"></script>
+        <script src="{{plugin_js('waitme/waitme.js')}}"></script>
         <script src="{{js('app.js')}}"></script>
         @stack('scripts')
     </body>

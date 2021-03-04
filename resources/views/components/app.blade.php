@@ -25,12 +25,12 @@
                     @auth
                         <x-navbar::nav-avatar />
                     @else
-                        <li class="nav-item border-right border-white">
+                        <li class="nav-item">
                             <a href="{{route('login')}}" class="nav-link">
                                 <small>Login</small>
                             </a>
                         </li>
-                        <li class="nav-item border-left border-white">
+                        <li class="nav-item">
                             <a href="{{route('login')}}" class="nav-link">
                                 <small>Register</small>
                             </a>

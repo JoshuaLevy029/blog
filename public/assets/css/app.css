@@ -34,3 +34,10 @@ h1 {
 .nav-item.avatar>a.nav-link.dropdown-toggle::before, .nav-item.avatar>a.nav-link.dropdown-toggle::after {
     display: none !important;
 }
+
+/* .navbar .dropdown.avatar .dropdown-menu {
+    padding: 0%;
+} */
+.navbar .dropdown.avatar .dropdown-menu a {
+    padding: 4px 24px;
+}

@@ -20,9 +20,10 @@
         @if($content)
             {!! $content !!}
         @else
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a href="" class="dropdown-item">Profile</a>
+            <a href="" class="dropdown-item">Configurations</a>
+            <div class="dropdown-divider"></div>
+            <a href="{{route('logout')}}" class="dropdown-item">Sign out</a>
         @endif
     </div>
 </li>
