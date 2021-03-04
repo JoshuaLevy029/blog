@@ -20,10 +20,12 @@
         @if($content)
             {!! $content !!}
         @else
-            <a href="" class="dropdown-item">Profile</a>
-            <a href="" class="dropdown-item">Configurations</a>
+            <a href="" class="dropdown-item"><i class="far fa-id-badge mr-2"></i> Profile</a>
+            <a href="" class="dropdown-item"><i class="fas fa-cogs mr-2"></i> Settings</a>
             <div class="dropdown-divider"></div>
-            <a href="{{route('logout')}}" class="dropdown-item">Sign out</a>
+            <a href="{{route('logout')}}" class="dropdown-item font-weight-bold text-center">
+                <small class="font-weight-bold">Sign out</small>
+            </a>
         @endif
     </div>
 </li>

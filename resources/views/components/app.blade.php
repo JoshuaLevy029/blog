@@ -31,7 +31,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('login')}}" class="nav-link">
+                            <a href="{{route('register')}}" class="nav-link">
                                 <small>Register</small>
                             </a>
                         </li>
