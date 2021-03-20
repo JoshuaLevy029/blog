@@ -19,6 +19,7 @@ class CreateMenuTable extends Migration
             $table->string('name')->nullable();
             $table->string('icon')->nullable();
             $table->string('route')->nullable();
+            $table->text('data')->nullable();
             $table->boolean('active')->default(true);
             $table->integer('order');
             $table->string('target')->default('_self');

@@ -33,6 +33,12 @@ class MenuSeeder extends Seeder
                 'order' => 3,
                 'icon' => 'far fa-comments',
             ],
+            [
+                'name' => 'Dashboard',
+                'order' => 4,
+                'icon' => 'far fa-chart-bar',
+                'permission' => '1,2,3'
+            ],
         ];
 
         foreach ($data as $i) {
